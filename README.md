@@ -1,13 +1,14 @@
 # EXPERIMENT--01-ALP-FOR-8086
-Name :
-Roll no 
-Date of experiment :
+## Name : Harisankar.S
+## Roll no : 212224240051
+## Date of experiment : 22-04-2026
 
 
 
 
 
-## Aim: To Write and execute ALP on fundamental arithmetic and logical operations
+## Aim: 
+To Write and execute ALP on fundamental arithmetic and logical operations
 ## Components required: 8086  emulator 
 ## Theory 
 Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as EMU8086, is an emulator of the program 8086 microprocessor. It is developed with a built-in 8086 assembler. This application is able to run programs on both PC desktops and laptops. This tool is primarily designed to copy or emulate hardware. These include the memory of a program, CPU, RAM, input and output devices, and even the display screen. There are instructions to follow when using this emulator. It can be executed into one of the two ways: backward or forward. There are also examples of assembly source code included. With this, it allows the programming of assembly language, reverse engineering, hardware architecture, and creating miniature operating system (OS). The user interface of 8086 Microprocessor Emulator is simple and easy to manage. There are five major buttons with icons and titles included. These are “Load”, “Reload”, “Step Back”, “Single Step”, and “Run”. Above those buttons is the menu that includes “File”, “View”, “Virtual Devices”, “Virtual Drive”, and “Help”. Below the buttons is a series of choices that are usually in numbers and codes. At the leftmost part is an area called “Registers” with an indication of either “H” or “L”. The other side is divided into two, which enables users to manually reset, debug, flag, etc. What is 8086 emulator emu8086 is an emulator of Intel 8086 (AMD compatible) microprocessor with integrated 8086 assembler and tutorials for beginners. Emulator runs programs like the real microprocessor in step-by-step mode. it shows registers, memory, stack, variables and flags.
@@ -78,26 +79,149 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 ## Programs for arithmetic  operations
 
 ## Addition  of 8 bit ALP 
-
-
-
+```
+org 100h
+MOV AX,312H;
+MOV BX,162H;
+AND AX,BX   
+MOV [5000H],AX;
+ret
+```
 ## Output  
+
+<img width="1600" height="928" alt="image" src="https://github.com/user-attachments/assets/3efb8183-82f7-4358-8fce-1b7d8a1aa403" />
+
  
 ## Subtraction   of 8 bit numbers  ALP 
- 
-## Output  
+```
+org 100h
+MOV AX, 123H;
+MOV BX, 243H;
+SUB AX, BX     
+MOV [5002H],AX;
+ret
+```
+## Output
+
+<img width="1600" height="898" alt="image" src="https://github.com/user-attachments/assets/66ed1b99-bac2-4633-aeb8-b6f325c3b726" />
+
 ## Multiplication alp 
+```
+org 100h
+MOV AX, 57H;
+MOV BX, 23H;
+MUL BX      
+MOV [5004H],AX;
+ret
+```
  ## Output  
 
+<img width="1600" height="922" alt="image" src="https://github.com/user-attachments/assets/f15550c2-a0fa-4a33-b98f-b043458a9882" />
 
 ## Division alp 
-
+```
+org 100h
+MOV AX, 98H;
+MOV BX, 17H;
+DIV BX       
+MOV [5006H],AX;
+ret
+```
 ## Output  
 
+<img width="1600" height="933" alt="image" src="https://github.com/user-attachments/assets/7340a20e-ecfe-435b-aa3c-23d64d30032b" />
+
+## Programs for logical  operations
+## AND 
+```
+org 100h
+MOV AX,6132H;
+MOV BX,8362H;
+AND AX,BX   
+MOV [5000H],AX;
+ret
+```
+## OUTPUT:
+
+<img width="1873" height="1069" alt="image" src="https://github.com/user-attachments/assets/b3d77622-a655-4cbd-a4c8-49afcc3e5be6" />
+
+## OR
+```
+org 100h
+MOV AX, 4132H;
+MOV BX, 2362H;
+OR AX, BX     
+MOV [5002H],AX;
+ret
+```
+## Output
+
+<img width="1815" height="1078" alt="image" src="https://github.com/user-attachments/assets/51b0bbb3-82c9-4556-829f-b9f827b40b8f" />
+
+## NAND:
+```
+org 100h
+MOV AX, 8475H;
+MOV BX, 1232H;
+AND AX,BX
+NOT AX      
+MOV [5004H],AX;
+ret
+```
+## Output
+<img width="1870" height="1085" alt="image" src="https://github.com/user-attachments/assets/5576eef8-73dc-4450-bd2c-7b647196189e" />
+
+## NOR
+```
+org 100h
+MOV AX, 4132H;
+MOV BX, 2362H;
+OR AX, BX  
+NOT AX   
+MOV [5006H],AX;
+ret 
+```
+## Output
+<img width="1836" height="1016" alt="image" src="https://github.com/user-attachments/assets/271d02bc-d174-4831-b8a4-2ba356f7a942" />
+
+## NOT
+```
+org 100h
+MOV AX, 5566H;
+NOT AX        
+MOV [5010H],AX;
+ret
+```
+## OUTPUT
+<img width="1819" height="1027" alt="image" src="https://github.com/user-attachments/assets/8fca4b8e-0802-481e-ba13-08bd59b4129c" />
+
+## XOR
+```
+org 100h
+MOV AX, 2233H;
+MOV BX, 3344H;
+XOR AX,BX
+MOV [5012H],AX;
+ret
+```
+## Output
+<img width="1863" height="1065" alt="image" src="https://github.com/user-attachments/assets/738a0cb5-30e6-4065-b9f8-6ff3de698eb5" />
+
+## XNOR
+```
+org 100h
+MOV AX,3344H;
+MOV BX,4455H;
+XOR AX,BX
+NOT AX
+MOV [5014H],AX;
+ret
+```
+## Output
+<img width="1832" height="1098" alt="image" src="https://github.com/user-attachments/assets/5f0f3558-c9f0-491d-81a6-a1b8adbfac23" />
 
 ## Result :
- 
-
+The Write and execute ALP on fundamental arithmetic and logical operations is executed successfully.
 
 
 
